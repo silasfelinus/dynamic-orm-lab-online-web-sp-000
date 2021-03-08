@@ -55,7 +55,7 @@ def self.column_names
   end
 
   def self.find_by(attribute)
-    DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE ? = ?", [attribute.first[0]], [attribute.first[1]])
+    DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE ? = ?", attribute.first[0], attribute.first[1])
   end
 
 
